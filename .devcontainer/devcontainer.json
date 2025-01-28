@@ -9,5 +9,12 @@
                 "christian-kohler.path-intellisense"
             ]
         }
-    }
+    },
+    "runArgs": [
+      "--userns=keep-id"
+    ],
+    "containerEnv": {
+      "HOME": "/home/node"
+    },
+    "shutdownAction": "stopContainer"
 }
