@@ -1,6 +1,6 @@
 {
     "name": "Bun",
-    "image": "oven/bun:latest",
+    "image": "ghcr.io/nhaef/devcontainer-bun:latest",
     "customizations": {
         "vscode": {
             "extensions": [
