@@ -1,6 +1,6 @@
 {
     "name": "NodeJS & Typescript",
-    "image": "ghcr.io/devcontainers/templates/typescript-node:4.0.2",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
     "customizations": {
         "vscode": {
             "extensions": [
