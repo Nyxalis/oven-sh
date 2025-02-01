@@ -1,12 +1,15 @@
 {
-    "name": "Bun",
-    "image": "ghcr.io/nhaef/devcontainer-bun:latest",
+    "name": "NodeJS & Typescript",
+    "image": "ghcr.io/devcontainers/templates/typescript-node:4.0.2",
     "customizations": {
         "vscode": {
             "extensions": [
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
-                "christian-kohler.path-intellisense"
+                "christian-kohler.path-intellisense",
+                "jripouteau.adonis-vscode-extension",
+                "jripouteau.japa-vscode",
+                "adonisjs.vscode-edge"
             ]
         }
     }
