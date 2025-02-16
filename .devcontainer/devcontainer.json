@@ -9,7 +9,8 @@
                 "christian-kohler.path-intellisense",
                 "jripouteau.adonis-vscode-extension",
                 "jripouteau.japa-vscode",
-                "adonisjs.vscode-edge"
+                "adonisjs.vscode-edge",
+                "bradlc.vscode-tailwindcss"
             ]
         }
     }
