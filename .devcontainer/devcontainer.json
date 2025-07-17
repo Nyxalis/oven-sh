@@ -1,20 +1,41 @@
 {
-  "name": "NodeJS & TypeScript",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspace",
+  "name": "Node.js (latest)",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node",
 
   "customizations": {
     "vscode": {
+      "settings": {},
       "extensions": [
+        "streetsidesoftware.code-spell-checker",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "christian-kohler.path-intellisense",
         "jripouteau.adonis-vscode-extension",
         "jripouteau.japa-vscode",
-        "adonisjs.vscode-edge",
         "bradlc.vscode-tailwindcss"
       ]
     }
-  }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "latest",
+      "mysqlDatabase": "dev",
+      "mysqlUser": "dev",
+      "mysqlPassword": "dev"
+    },
+    "ghcr.io/itsmechlark/features/redis-server:1": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts": [3333],
+  "portsAttributes": {
+    "3000": {
+      "label": "API Port",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "npm install",
+
+  "remoteUser": "root"
 }
