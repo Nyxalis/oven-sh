@@ -1,17 +1,20 @@
 {
-    "name": "NodeJS & Typescript",
-    "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "christian-kohler.path-intellisense",
-                "jripouteau.adonis-vscode-extension",
-                "jripouteau.japa-vscode",
-                "adonisjs.vscode-edge",
-                "bradlc.vscode-tailwindcss"
-            ]
-        }
+  "name": "NodeJS & TypeScript",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "jripouteau.adonis-vscode-extension",
+        "jripouteau.japa-vscode",
+        "adonisjs.vscode-edge",
+        "bradlc.vscode-tailwindcss"
+      ]
     }
+  }
 }
