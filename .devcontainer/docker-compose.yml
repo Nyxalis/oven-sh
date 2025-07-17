@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/typescript-node
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    networks:
+      - devnet
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dev
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+    ports:
+      - "3306:3306"
+    networks:
+      - devnet
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - devnet
+
+networks:
+  devnet:
