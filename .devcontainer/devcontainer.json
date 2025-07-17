@@ -17,12 +17,6 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "latest",
-      "mysqlDatabase": "dev",
-      "mysqlUser": "dev",
-      "mysqlPassword": "dev"
-    },
     "ghcr.io/itsmechlark/features/redis-server:1": {
       "version": "latest"
     }
